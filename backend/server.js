@@ -5,11 +5,11 @@ const cors = require("cors");
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+app.use(cors());npm 
 
 mongoose.connect("mongodb://localhost:27017/keeperDB", {
     useNewUrlParser: true, 
-    useUnifiedTopology: true,
+    useUnifiedTopology: false,
     useCreateIndex: true
 });
 
@@ -57,6 +57,3 @@ app.post("/delete", function(req,res){
     });
 });
 
-app.listen(4000, function() {
-    console.log("Node Server started on port 4000");
-});
